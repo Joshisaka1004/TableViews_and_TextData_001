@@ -13,7 +13,7 @@ class DataModel {
     var guestTeams: [String]!
     var homeGoals: [Int]!
     var guestGoals: [Int]!
-    var scorePerTeam: [String: (Int, String, String)]!
+    var scorePerTeam: [String: (Int, String, String, Int)]!
     var myTeamsArray = [String]()
     
     init() {
@@ -21,7 +21,7 @@ class DataModel {
         guestTeams = [String]()
         homeGoals = [Int]()
         guestGoals = [Int]()
-        scorePerTeam = [String: (Int, String, String)]()
+        scorePerTeam = [String: (Int, String, String, Int)]()
     }
     
     func newRanking() -> [String] {

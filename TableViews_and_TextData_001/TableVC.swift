@@ -45,14 +45,14 @@ class TableVC: UITableViewController {
             goals1 = myCell.homeGoalsTextField.text!
             goals2 = myCell.guestGoalsTextField.text!
             if goals1 > goals2 {
-                obj1.scorePerTeam["\(myCell.homeTeamLabel.text!)"] = (3, "\(goals1) - \(goals2)", "\(Int(goals1)! - Int(goals2)!)")
-                obj1.scorePerTeam["\(myCell.guestTeamLabel.text!)"] = (0, "\(goals2) - \(goals1)", "\(Int(goals2)! - Int(goals1)!)")
+                obj1.scorePerTeam["\(myCell.homeTeamLabel.text!)"] = (3, "\(goals1) - \(goals2)", "\(Int(goals1)! - Int(goals2)!)", Int(goals1)!)
+                obj1.scorePerTeam["\(myCell.guestTeamLabel.text!)"] = (0, "\(goals2) - \(goals1)", "\(Int(goals2)! - Int(goals1)!)", Int(goals2)!)
             } else if goals2 > goals1 {
-                obj1.scorePerTeam["\(myCell.homeTeamLabel.text!)"] = (0, "\(goals1) - \(goals2)", "\(Int(goals1)! - Int(goals2)!)")
-                obj1.scorePerTeam["\(myCell.guestTeamLabel.text!)"] = (3, "\(goals2) - \(goals1)", "\(Int(goals2)! - Int(goals1)!)")
+                obj1.scorePerTeam["\(myCell.homeTeamLabel.text!)"] = (0, "\(goals1) - \(goals2)", "\(Int(goals1)! - Int(goals2)!)", Int(goals1)!)
+                obj1.scorePerTeam["\(myCell.guestTeamLabel.text!)"] = (3, "\(goals2) - \(goals1)", "\(Int(goals2)! - Int(goals1)!)", Int(goals2)!)
             } else if goals1 == goals2 && goals1 != "" && goals2 != "" {
-                obj1.scorePerTeam["\(myCell.homeTeamLabel.text!)"] = (1, "\(goals1) - \(goals2)", "\(Int(goals1)! - Int(goals2)!)")
-                obj1.scorePerTeam["\(myCell.guestTeamLabel.text!)"] = (1, "\(goals2) - \(goals1)", "\(Int(goals2)! - Int(goals1)!)")
+                obj1.scorePerTeam["\(myCell.homeTeamLabel.text!)"] = (1, "\(goals1) - \(goals2)", "\(Int(goals1)! - Int(goals2)!)", Int(goals1)!)
+                obj1.scorePerTeam["\(myCell.guestTeamLabel.text!)"] = (1, "\(goals2) - \(goals1)", "\(Int(goals2)! - Int(goals1)!)", Int(goals2)!)
             }
         }
         _ = obj1.newRanking()
