@@ -26,7 +26,7 @@ class DataModel {
     
     func newRanking() -> [String] {
         var scorePerTeamNew = scorePerTeam.sorted(by: {$0.value.0 > $1.value.0})
-        scorePerTeamNew.sort(by: {$0.value.0 != $1.value.0 ? $0.value.0 > $1.value.0 : (Int($0.value.2)! != Int($1.value.2)!) ? Int($0.value.2)! > Int($1.value.2)! : $0.value.3 > $0.value.3})
+        scorePerTeamNew.sort(by: {$0.value.0 != $1.value.0 ? $0.value.0 > $1.value.0 : (Int($0.value.2)! != Int($1.value.2)!) ? Int($0.value.2)! > Int($1.value.2)! : $0.value.3 > $1.value.3})
         for (k, _) in scorePerTeamNew {
             myTeamsArray.append(k)
         }
